@@ -10,6 +10,5 @@ RUN echo $'[mariadb]\nname = MariaDB\nbaseurl = http://yum.mariadb.org/10.2/cent
     yum -y clean all
 
 RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
-    yum install -y nodejs && \
-    npm install -g grunt && \
-    npm install -g imagemagick
+    yum install -y nodejs ImageMagick GraphicsMagick && \
+    npm install -g grunt 
