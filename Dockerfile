@@ -9,7 +9,7 @@ RUN echo $'[mariadb]\nname = MariaDB\nbaseurl = http://yum.mariadb.org/10.2/cent
     yum -y install --setopt=tsflags=nodocs $INSTALL_PKGS && \
     yum -y clean all
 
-RUN - curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
+RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
     yum install -y nodejs && \
     npm install -g grunt && \
     npm install -g imagemagick
